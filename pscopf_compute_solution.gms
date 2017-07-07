@@ -434,6 +434,7 @@ kRealPowerShortfallSol(k)
 
 file sol3 /'solution3.txt'/;
 put sol3;
+sol3.nr = 2;
 put '--summary' /;
 put 'max norm viol all bnd/constr (1),' max_ViolNorm:0:10 /;
 put 'max norm viol bus volt mag min (1),' max_jkVoltageMagnitudeLoViolNorm:0:10 /;
@@ -470,6 +471,7 @@ put 'max viol zero imped branch reactive power equ (pu),' max_ijjkReactivePowerI
 put 'max viol gen reactive power lower slack . over voltage (pu),' max_lk_QLoSlack_VMDevPos_compViolSol:0:10 /;
 put 'max viol gen reactive power upper slack . under voltage (pu),' max_lk_QUpSlack_VMDevNeg_compViolSol:0:10 /;
 put '--end of summary' /;
+sol3.nr = 1;
 put '--base generator' /;
 put
   'genID,'
